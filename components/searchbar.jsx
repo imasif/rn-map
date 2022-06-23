@@ -89,7 +89,7 @@ const lightStyle = StyleSheet.create({
         left: '5%',
         flex: 1,
         position: 'absolute',
-        zIndex: 1,
+        zIndex: 2,
         bottom: '-50%',
         borderRadius: 10
         // border: '2px solid #ccc',
@@ -150,7 +150,7 @@ const darkStyle = StyleSheet.create({
         left: '5%',
         flex: 1,
         position: 'absolute',
-        zIndex: 1,
+        zIndex: 2,
         bottom: '-50%',
         borderRadius: 10
     },

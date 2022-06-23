@@ -15,7 +15,7 @@ export default function App() {
         <View style={theme == 'light' ? lightStyles.container : darkStyles.container}>
             <StatusBar style="auto" />
             <Map theme={theme} changeTheme={changeTheme} />
-            <View style={{ height: 50 }}>
+            <View style={{ height: 49 }}>
                 <TabBar theme={theme} />
             </View>
         </View>

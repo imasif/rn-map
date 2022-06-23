@@ -1,7 +1,7 @@
 
 import * as React from 'react';
 import { View, Text, SafeAreaView } from 'react-native';
-import { AntDesign, FontAwesome5, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
+import { AntDesign, Feather, FontAwesome5, Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Empty from './empty';
@@ -12,10 +12,10 @@ const MyTheme = {
     ...DefaultTheme,
     colors: {
         ...DefaultTheme.colors,
-        primary: 'rgb(255, 45, 85)',
+        primary: '#000',
     },
     headerShown: false,
-    componentBackgroundColor: '#f00',
+    componentBackgroundColor: '#000',
 };
 
 export default function TabBar({ theme }) {
@@ -24,11 +24,14 @@ export default function TabBar({ theme }) {
             <Tab.Navigator
                 initialRouteName="compass"
                 screenOptions={{
-                    // tabBarStyle: { position: 'absolute', zIndex:2 },
-                }}
-                tabBarOptions={{
-                    inactiveTintColor: '#454545',
-                    activeTintColor: '#454545',
+                    tabBarActiveTintColor:  theme == 'light' ? '#454545' : '#fff',
+                    tabBarInactiveTintColor: theme == 'light' ? '#454545' :  '#fff',
+                    tabBarStyle: { 
+                        backgroundColor: theme == 'light' ? '#fff' : '#000',
+                        borderTopWidth: 0,
+                        borderTopColor: "transparent",
+                        elevation: 0,
+                     },
                 }}>
                 <Tab.Screen
                     name="compass"
@@ -37,7 +40,7 @@ export default function TabBar({ theme }) {
                         tabBarShowLabel: false,
                         headerShown: false,
                         tabBarIcon: ({ color, size }) => (
-                            <MaterialCommunityIcons name="compass" color={color} size={size} />
+                            <Feather name="compass" color={color} size={size} />
                         ),
                     }}
                 />

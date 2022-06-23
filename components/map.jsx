@@ -1,23 +1,77 @@
 import * as React from 'react';
 import MapView from 'react-native-maps';
-import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, Image } from 'react-native';
 import SearchBar from './searchbar';
 import OverlayButtonWrap from './OverlayButtons';
+import OverlayLocation from './map_place';
 
 export default function Map({ theme, changeTheme }) {
+    const [locations, setLocations] = React.useState([
+        {
+            latitude: 23.872896242844426,
+            longitude: 90.39932911312448,
+            image: 'https://lh6.googleusercontent.com/MMSw2cjKUEV54KH0_knHPlF1n4Zoz2Qj7HqMxwquJ519C2-WWhRfYkJNIAtuRdvO4siAbE3zj-RtRfgEYjY=w1852-h980-rw',
+            name: 'Great Home',
+            address: 'Azampur, Dhaka, Bangladesh',
+        },
+        {
+            latitude: 23.869992173301274,
+            longitude: 90.41228954738831,
+            image: 'https://lh5.googleusercontent.com/WBtu-z0rz-QsUuEZveTVo4My35aa5X9g_onjpuL8sz5B1vwf0w1AnGJPor5di0H5MkvTbjaTf8CB5icLKFo=w1852-h680-rw',
+            name: 'Great Food',
+            address: 'Chalabon, Dhaka, Bangladesh',
+        },
+        {
+            latitude: 23.86112258472573,
+            longitude: 90.43031399239099,
+            image: 'https://lh3.googleusercontent.com/0pThluf4498SmWliQpHNsgJM9COtO7iQLwZjAxa9KbnZzGthyRObgRHiJWkgM1Eg5EdLo4PgfbvApkgNbIQ=w1852-h980-rw',
+            name: 'Great Scene',
+            address: 'Dakkhinkhan, Dhaka, Bangladesh',
+        },
+    ]);
+
+    const [selectedLocation, setSelectedLocation] = React.useState(null);
+
+    const [selectedLocationIdx, setSelectedLocationIdx] = React.useState(null);
 
     return (
-        <View style={styles.container}>
+        <View style={lightStyle.container}>
             <SearchBar theme={theme} />
             <OverlayButtonWrap theme={theme} changeTheme={changeTheme} />
             <MapView
                 initialRegion={{
-                    latitude: 37.78825,
-                    longitude: -122.4324,
+                    latitude: 23.863798355751083,
+                    longitude: 90.41458563425171,
                     latitudeDelta: 0.0922,
                     longitudeDelta: 0.0421,
                 }}
-                customMapStyle={theme == 'dark' ? mapDarktheme : []} style={styles.map} />
+                customMapStyle={theme == 'light' ? []: mapDarktheme} style={theme == 'light' ? lightStyle.map : darkStyle.map}>
+
+                    {locations.length > 0 && locations.map((location, index) =>(
+                    
+                        <MapView.Marker
+                            style={{width:80, height:80}}
+                            key={index}
+                            title=""
+                            coordinate={{
+                                latitude: parseFloat(location.latitude),
+                                longitude: parseFloat(location.longitude),
+                            }}
+                            onPress={() => {
+                                setSelectedLocation(location);
+                                setSelectedLocationIdx(index);
+                            }}
+                            >
+                            <View style={[theme == 'light' ? lightStyle.markerView : darkStyle.markerView, selectedLocationIdx == index ? theme == 'light' ? lightStyle.markerViewSelected : darkStyle.markerViewSelected : {}]}>
+                                <Image source={require('../assets/map_marker.png')} style={{width:25, height:25}} />
+                            </View>  
+                            </MapView.Marker>
+                    ))}
+            </MapView>
+
+            {selectedLocation != null && (
+                <OverlayLocation theme={theme} selectedLocation={selectedLocation} />
+            )}
         </View>
     );
 }
@@ -209,7 +263,7 @@ const mapDarktheme = [
     }
 ]
 
-const styles = StyleSheet.create({
+const lightStyle = StyleSheet.create({
     container: {
         display: 'flex',
         flex: 1,
@@ -219,4 +273,60 @@ const styles = StyleSheet.create({
         width: Dimensions.get('window').width,
         height: Dimensions.get('window').height,
     },
+    markerView: {
+        backgroundColor: "white", 
+        elevation: 5,
+        shadowColor: '#D9D9D7',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.8,
+        shadowRadius: 1,
+        padding: 7,
+        width:40,
+        height:40,
+        borderRadius: 50,
+        borderColor: '#D9D9D7',
+        borderWidth:1
+    },
+    markerViewSelected: {
+        borderColor: '#060606',
+        borderWidth: 2, 
+        padding: 10,
+        width:49,
+        height:49
+    }
+});
+
+
+const darkStyle = StyleSheet.create({
+    container: {
+        display: 'flex',
+        flex: 1,
+        backgroundColor: '#000',
+    },
+    map: {
+        backgroundColor: '#000',
+        width: Dimensions.get('window').width,
+        height: Dimensions.get('window').height,
+    },
+    markerView: {
+        backgroundColor: "#333", 
+        elevation: 5,
+        shadowColor: '#D9D9D7',
+        shadowOffset: { width: 0, height: 1 },
+        shadowOpacity: 0.8,
+        shadowRadius: 1,
+        padding: 7,
+        width:40,
+        height:40,
+        borderRadius: 50,
+        borderColor: '#333',
+        borderWidth:1
+    },
+    markerViewSelected: {
+        borderColor: '#fff',
+        borderWidth: 2, 
+        padding: 10,
+        width:49,
+        height:49
+    }
 });

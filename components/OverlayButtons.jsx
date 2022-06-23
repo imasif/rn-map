@@ -46,7 +46,7 @@ export default function OverlayButtonWrap({theme, changeTheme}) {
 var lightStyle = StyleSheet.create({
     btnClickContain: {
         position: 'absolute',
-        top: '25%',
+        top: '15%',
         right: '8%',
         flex: 1,
         zIndex: 1,
@@ -90,7 +90,7 @@ var lightStyle = StyleSheet.create({
 var darkStyle = StyleSheet.create({
     btnClickContain: {
         position: 'absolute',
-        top: '25%',
+        top: '15%',
         right: '8%',
         flex: 1,
         zIndex: 1,
