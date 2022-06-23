@@ -1,6 +1,6 @@
 import * as React from 'react';
 import MapView from 'react-native-maps';
-import { StyleSheet, Text, View, Dimensions, Image } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, Image, Platform } from 'react-native';
 import SearchBar from './searchbar';
 import OverlayButtonWrap from './OverlayButtons';
 import OverlayLocation from './map_place';

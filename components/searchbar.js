@@ -6,7 +6,8 @@ import {
     TouchableOpacity,
     View,
     TextInput,
-    Dimensions
+    Dimensions,
+    Platform
 } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
