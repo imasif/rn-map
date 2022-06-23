@@ -39,6 +39,7 @@ export default function Map({ theme, changeTheme }) {
             <SearchBar theme={theme} />
             <OverlayButtonWrap theme={theme} changeTheme={changeTheme} />
             <MapView
+                provider = { MapView.PROVIDER_GOOGLE }
                 initialRegion={{
                     latitude: 23.863798355751083,
                     longitude: 90.41458563425171,

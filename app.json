@@ -28,6 +28,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "React Map example",
+    "githubUrl": "https://github.com/imasif/rn-map"
   }
 }
