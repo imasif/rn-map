@@ -1,12 +1,10 @@
 import Autocomplete from 'react-native-autocomplete-input';
-import PropTypes from 'prop-types';
-import React, { FC, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     StyleSheet,
     Text,
     TouchableOpacity,
     View,
-    Platform,
     TextInput
 } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';

@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OverlayButtonWrap test against snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "stretch",
+      "alignSelf": "stretch",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "center",
+      "marginBottom": 5,
+      "marginTop": 5,
+      "padding": 5,
+      "position": "absolute",
+      "right": "8%",
+      "top": "15%",
+      "zIndex": 1,
+    }
+  }
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "stretch",
+          "alignSelf": "stretch",
+          "backgroundColor": "#333",
+          "borderRadius": 50,
+          "elevation": 5,
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "marginTop": 10,
+          "padding": 10,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 0.8,
+          "shadowRadius": 1,
+        }
+      }
+    >
+      <Text />
+    </View>
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "stretch",
+          "alignSelf": "stretch",
+          "backgroundColor": "#333",
+          "borderRadius": 50,
+          "elevation": 5,
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "marginTop": 10,
+          "padding": 10,
+          "shadowColor": "#000",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 0.8,
+          "shadowRadius": 1,
+        }
+      }
+    >
+      <Text />
+    </View>
+  </View>
+</View>
+`;

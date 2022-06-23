@@ -1,0 +1,263 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Map test against snapshot 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "display": "flex",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderRadius": 10,
+        "flex": 1,
+        "left": "5%",
+        "position": "absolute",
+        "top": "5%",
+        "width": "90%",
+        "zIndex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "borderRadius": 10,
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "marginLeft": "5%",
+          "marginRight": "5%",
+          "marginTop": "5%",
+          "padding": 10,
+        }
+      }
+    >
+      <Text />
+      <View
+        style={
+          Array [
+            Object {
+              "flex": 1,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "borderColor": "#b9b9b9",
+                "borderRadius": 1,
+                "borderWidth": 1,
+                "marginBottom": 0,
+              },
+              Object {
+                "borderWidth": 0,
+                "marginTop": "0%",
+              },
+            ]
+          }
+        >
+          <TextInput
+            autoCorrect={false}
+            data={
+              Array [
+                Object {
+                  "id": 1,
+                  "title": "demo data one",
+                },
+              ]
+            }
+            editable={true}
+            flatListProps={
+              Object {
+                "keyExtractor": [Function],
+                "keyboardShouldPersistTaps": "always",
+              }
+            }
+            inputContainerStyle={
+              Object {
+                "borderWidth": 0,
+                "marginTop": "0%",
+              }
+            }
+            onChangeText={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
+            placeholder="Seach here"
+            placeholderTextColor="gray"
+            renderResultList={[Function]}
+            renderTextInput={[Function]}
+            style={null}
+            theme="light"
+            value=""
+          />
+        </View>
+        <View
+          onStartShouldSetResponderCapture={[Function]}
+        >
+          <RCTScrollView
+            data={
+              Array [
+                Object {
+                  "id": 1,
+                  "title": "demo data one",
+                },
+              ]
+            }
+            getItem={[Function]}
+            getItemCount={[Function]}
+            keyExtractor={[Function]}
+            keyboardShouldPersistTaps="always"
+            onContentSizeChange={[Function]}
+            onLayout={[Function]}
+            onMomentumScrollBegin={[Function]}
+            onMomentumScrollEnd={[Function]}
+            onScroll={[Function]}
+            onScrollBeginDrag={[Function]}
+            onScrollEndDrag={[Function]}
+            removeClippedSubviews={true}
+            renderItem={[Function]}
+            scrollEventThrottle={50}
+            stickyHeaderIndices={Array []}
+            viewabilityConfigCallbackPairs={Array []}
+          >
+            <View>
+              <View
+                onLayout={[Function]}
+                style={null}
+              />
+            </View>
+          </RCTScrollView>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "stretch",
+        "alignSelf": "stretch",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "marginBottom": 5,
+        "marginTop": 5,
+        "padding": 5,
+        "position": "absolute",
+        "right": "8%",
+        "top": "15%",
+        "zIndex": 1,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "stretch",
+            "alignSelf": "stretch",
+            "backgroundColor": "white",
+            "borderRadius": 50,
+            "elevation": 5,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "marginTop": 10,
+            "padding": 10,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 1,
+          }
+        }
+      >
+        <Text />
+      </View>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "stretch",
+            "alignSelf": "stretch",
+            "backgroundColor": "white",
+            "borderRadius": 50,
+            "elevation": 5,
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "marginTop": 10,
+            "padding": 10,
+            "shadowColor": "#000",
+            "shadowOffset": Object {
+              "height": 1,
+              "width": 0,
+            },
+            "shadowOpacity": 0.8,
+            "shadowRadius": 1,
+          }
+        }
+      >
+        <Text />
+      </View>
+    </View>
+  </View>
+  <AIRMap
+    initialRegion={null}
+    onChange={[Function]}
+    onLayout={[Function]}
+    onMapReady={[Function]}
+    onMarkerPress={[Function]}
+    region={null}
+    style={
+      Object {
+        "height": 1334,
+        "width": 750,
+      }
+    }
+  />
+</View>
+`;

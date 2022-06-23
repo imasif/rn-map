@@ -1,5 +1,3 @@
-import Autocomplete from 'react-native-autocomplete-input';
-import PropTypes from 'prop-types';
 import React from 'react';
 import {
     StyleSheet,

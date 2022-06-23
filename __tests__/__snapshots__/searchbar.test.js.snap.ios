@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar test against snapshot 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 10,
+      "flex": 1,
+      "left": "5%",
+      "position": "absolute",
+      "top": "5%",
+      "width": "90%",
+      "zIndex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "borderRadius": 10,
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "marginLeft": "5%",
+        "marginRight": "5%",
+        "marginTop": "5%",
+        "padding": 10,
+      }
+    }
+  >
+    <Text />
+    <View
+      style={
+        Array [
+          Object {
+            "zIndex": 1,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderColor": "#b9b9b9",
+              "borderRadius": 1,
+              "borderWidth": 1,
+            },
+            Object {
+              "borderWidth": 0,
+              "marginTop": "0%",
+            },
+          ]
+        }
+      >
+        <TextInput
+          autoCorrect={false}
+          data={
+            Array [
+              Object {
+                "id": 1,
+                "title": "demo data one",
+              },
+            ]
+          }
+          editable={true}
+          flatListProps={
+            Object {
+              "keyExtractor": [Function],
+              "keyboardShouldPersistTaps": "always",
+            }
+          }
+          inputContainerStyle={
+            Object {
+              "borderWidth": 0,
+              "marginTop": "0%",
+            }
+          }
+          onChangeText={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          placeholder="Seach here"
+          placeholderTextColor="gray"
+          renderResultList={[Function]}
+          renderTextInput={[Function]}
+          style={null}
+          theme="light"
+          value=""
+        />
+      </View>
+      <View
+        onStartShouldSetResponderCapture={[Function]}
+      >
+        <RCTScrollView
+          data={
+            Array [
+              Object {
+                "id": 1,
+                "title": "demo data one",
+              },
+            ]
+          }
+          getItem={[Function]}
+          getItemCount={[Function]}
+          keyExtractor={[Function]}
+          keyboardShouldPersistTaps="always"
+          onContentSizeChange={[Function]}
+          onLayout={[Function]}
+          onMomentumScrollBegin={[Function]}
+          onMomentumScrollEnd={[Function]}
+          onScroll={[Function]}
+          onScrollBeginDrag={[Function]}
+          onScrollEndDrag={[Function]}
+          removeClippedSubviews={false}
+          renderItem={[Function]}
+          scrollEventThrottle={50}
+          stickyHeaderIndices={Array []}
+          viewabilityConfigCallbackPairs={Array []}
+        >
+          <View>
+            <View
+              onLayout={[Function]}
+              style={null}
+            />
+          </View>
+        </RCTScrollView>
+      </View>
+    </View>
+  </View>
+</View>
+`;
