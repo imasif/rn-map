@@ -71,8 +71,8 @@ const lightStyle = StyleSheet.create({
         position: 'absolute',
         flex: 1,
         zIndex: 1,
-        width: '90%',
-        left: '5%',
+        width: '98%',
+        left: '1%',
         top: '5%',
         borderRadius: 10
     },
@@ -83,8 +83,8 @@ const lightStyle = StyleSheet.create({
     titleSearchContainerWrap: {
         backgroundColor: '#F5FCFF',
         padding: 10,
-        width: '90%',
-        left: '5%',
+        width: '92%',
+        left: '4%',
         flex: 1,
         position: 'absolute',
         zIndex: 2,
@@ -122,35 +122,37 @@ const lightStyle = StyleSheet.create({
     },
     inputContainer: {
         borderWidth: 0,
-        marginTop: '0%',
+        backgroundColor: 'transparent',
+        marginLeft: 10,
     }
 });
 
 const darkStyle = StyleSheet.create({
+    
     container: {
         position: 'absolute',
         flex: 1,
         zIndex: 1,
-        width: '90%',
-        left: '5%',
+        width: '98%',
+        left: '1%',
         top: '5%',
         borderRadius: 10
     },
     itemText: {
         fontSize: 15,
         margin: 2,
-        color: '#606060'
     },
     titleSearchContainerWrap: {
-        backgroundColor: '#333',
+        backgroundColor: '#ccc',
         padding: 10,
-        width: '90%',
-        left: '5%',
+        width: '92%',
+        left: '4%',
         flex: 1,
         position: 'absolute',
         zIndex: 2,
         bottom: '-50%',
         borderRadius: 10
+        // border: '2px solid #ccc',
     },
     titleSearchContainer: {
         paddingLeft: 8,
