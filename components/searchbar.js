@@ -180,6 +180,7 @@ const darkStyle = StyleSheet.create({
     inputContainer: {
         borderWidth: 0,
         backgroundColor: 'transparent',
+        marginLeft: 10
     }
 });
 
