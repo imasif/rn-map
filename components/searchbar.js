@@ -5,7 +5,8 @@ import {
     Text,
     TouchableOpacity,
     View,
-    TextInput
+    TextInput,
+    Dimensions
 } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 
@@ -33,7 +34,13 @@ export default function SearchBar({ theme }) {
                 />
                 <Autocomplete
                     theme={theme}
-                    renderTextInput={(props) => (<TextInput {...props} placeholderTextColor={theme == 'light' ? "gray" : "#606060"} style={theme == 'light' ? null : { color: '#606060', backgroundColor: '#333' }} placeholder={placeholder} />)}
+                    renderTextInput={(props) => (<TextInput {...props} placeholderTextColor={theme == 'light' ? "gray" : "#606060"} style={[theme == 'light' ? {} : { color: '#606060', backgroundColor: '#333' }, {
+                        ...Platform.select({
+                            ios: {
+                                width: Dimensions.get('window').width-120,
+                            }
+                        }),
+                    }]} placeholder={placeholder} />)}
                     inputContainerStyle={theme == 'light' ? lightStyle.inputContainer : darkStyle.inputContainer}
                     editable={!isLoading}
                     autoCorrect={false}
@@ -55,7 +62,7 @@ export default function SearchBar({ theme }) {
             {query.length > 0 &&
                 <View style={theme == 'light' ? lightStyle.titleSearchContainerWrap : darkStyle.titleSearchContainerWrap}>
                     {allMovies.length > 0 && allMovies.map((movie) =>
-                        <TouchableOpacity activeOpacity={.7} onPress={() => setQuery(movie.title)}>
+                        <TouchableOpacity key={movie.id} activeOpacity={.7} onPress={() => setQuery(movie.title)}>
                             <View style={theme == 'light' ? lightStyle.titleSearchContainer : darkStyle.titleSearchContainer}>
                                 <Text style={theme == 'light' ? lightStyle.itemText : darkStyle.itemText}>{movie.title}</Text>
                             </View>
@@ -93,8 +100,6 @@ const lightStyle = StyleSheet.create({
         // border: '2px solid #ccc',
     },
     titleSearchContainer: {
-        // `backgroundColor` needs to be set otherwise the
-        // autocomplete input will disappear on text input.
         paddingLeft: 8,
     },
     infoText: {

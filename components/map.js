@@ -51,7 +51,7 @@ export default function Map({ theme, changeTheme }) {
                     {locations.length > 0 && locations.map((location, index) =>(
                     
                         <MapView.Marker
-                            style={{width:80, height:80}}
+                            style={{width:120, height:120}}
                             key={index}
                             title=""
                             coordinate={{
@@ -293,7 +293,14 @@ const lightStyle = StyleSheet.create({
         borderWidth: 2, 
         padding: 10,
         width:49,
-        height:49
+        height:49,
+        ...Platform.select({
+            ios: {
+                padding: 7,
+                width:40,
+                height:40,
+            }
+        }),
     }
 });
 
@@ -328,6 +335,13 @@ const darkStyle = StyleSheet.create({
         borderWidth: 2, 
         padding: 10,
         width:49,
-        height:49
+        height:49,
+        ...Platform.select({
+            ios: {
+                padding: 7,
+                width:40,
+                height:40,
+            }
+        }),
     }
 });
